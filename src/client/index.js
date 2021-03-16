@@ -1,5 +1,6 @@
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { getSentiment } from './js/sentimentHandler'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -13,6 +14,7 @@ alert("I EXIST")
 
 export {
     checkForName,
-    handleSubmit
+    handleSubmit,
+    getSentiment
    }
 
