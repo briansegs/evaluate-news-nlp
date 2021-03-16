@@ -14,7 +14,13 @@ function getSentiment(event) {
     // .then(function(res) {
     //     document.getElementById('results').innerHTML = res.message
     // })
-    document.getElementById('sentiment-results').innerHTML = sentimentText;
+    let result = {
+        'Text': `${sentimentText}`,
+        'Score tag': 'P',
+        'Agreement': 'AGREEMENT',
+        'Confidence': 100
+    }
+    document.getElementById('sentiment-results').innerHTML = JSON.stringify(result);
     }
 
 }
