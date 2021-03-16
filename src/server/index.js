@@ -3,7 +3,9 @@ const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 var bodyParser = require('body-parser')
 var cors = require('cors')
+const dotenv = require('dotenv');
 
+dotenv.config();
 
 const app = express()
 app.use(cors())
