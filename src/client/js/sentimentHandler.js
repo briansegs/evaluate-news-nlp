@@ -14,7 +14,9 @@ function getSentiment(event) {
     // .then(function(res) {
     //     document.getElementById('results').innerHTML = res.message
     // })
+    document.getElementById('sentiment-results').innerHTML = sentimentText;
     }
+
 }
 
 export { getSentiment }
