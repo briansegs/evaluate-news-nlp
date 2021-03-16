@@ -28,6 +28,14 @@
                 <strong>Form Results:</strong>
                 <div id="results"></div>
             </section>
+
+            <section>
+                <form>
+                    <label>Text:</label>
+                    <input id="sentiment" type="text" name="text" value="" placeholder="The input text">
+                    <button onclick="return Client.getSentiment(event)">Submit</button>
+                </form>
+            </section>
         </main>
 
         <footer>
