@@ -32,9 +32,13 @@
             <section>
                 <form>
                     <label>Text:</label>
-                    <input id="sentiment" type="text" name="text" value="" placeholder="The input text">
+                    <input id="sentiment" type="text" name="text" value="" placeholder="Input text">
                     <button onclick="return Client.getSentiment(event)">Submit</button>
                 </form>
+            </section>
+            <section>
+                <strong>Sentiment Analysis:</strong>
+                <div id="sentiment-results"></div>
             </section>
         </main>
 
