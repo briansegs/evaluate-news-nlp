@@ -7,20 +7,13 @@ function getSentiment(event) {
     if (sentimentText === '') {
         alert ('Please input text.')
     } else {
-
-    console.log("::: Sentiment Submitted :::")
+        console.log("::: Sentiment Submitted :::")
     // fetch('http://localhost:8081/test')
     // .then(res => res.json())
     // .then(function(res) {
     //     document.getElementById('results').innerHTML = res.message
     // })
-    let result = {
-        'Text': `${sentimentText}`,
-        'Score tag': 'P',
-        'Agreement': 'AGREEMENT',
-        'Confidence': 100
-    }
-    document.getElementById('sentiment-results').innerHTML = JSON.stringify(result);
+        Client.addResult(sentimentText)
     }
 
 }
