@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC');
+
+body {
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+.overlay {
+	width: 100%;
+	background-color: #ffffff;
+}
+
+
+table {
+  height: 40%;
+  left: 10%;
+  margin: 20px auto;
+  overflow-y: scroll;
+  position: static;
+  width: 80%;
+  border-collapse: separate;
+  border-spacing: 1.5px;
+  border: 1px solid #9887d8;
+
+}
+
+thead th {
+	background:  #9887d8;
+	color: #f2ebe1;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+
+}
+
+tr {
+  background: #dbdbdb;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+}
+
+th, td {
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	padding: 10px;
+	text-align: left;
+	width: auto;
+
+}
+
+
+
