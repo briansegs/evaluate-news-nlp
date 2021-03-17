@@ -1,11 +1,4 @@
 function addResult(sentimentText) {
-    let tb = document.getElementById('tbody');
-
-    if (tb.firstChild != null) {
-        tb.firstChild.remove();
-    }
-
-    console.log("::: Creating Elements :::");
 
     let res = {
         status: {
@@ -23,19 +16,10 @@ function addResult(sentimentText) {
         'sentence_list': [{'text': sentimentText}]
     };
 
-    let formatedResults = Client.formatResult(res);
-    console.log(formatedResults);
+    let formatedResults = Client.formatAnalysis(res);
+    console.log('Formated Results:', formatedResults);
 
-    let tr = document.createElement('tr');
-    for (let i in formatedResults) {
-        let td = document.createElement('td');
-        td.innerHTML = formatedResults[i];
-        tr.appendChild(td);
-    }
-
-    tb.appendChild(tr);
-
-    console.log("::: Elements Created :::");
+    Client.createTable(formatedResults);
 
     document.getElementById('sentiment-results').innerHTML = JSON.stringify(res);
 
