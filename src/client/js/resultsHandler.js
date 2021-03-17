@@ -1,4 +1,10 @@
 function addResult(sentimentText) {
+    let tb = document.getElementById('tbody');
+
+    if (tb.firstChild != null) {
+        tb.firstChild.remove();
+    }
+
     console.log("::: Creating Elements :::");
 
     let res = {
@@ -15,24 +21,26 @@ function addResult(sentimentText) {
         'confidence': "100",
         'irony': "NONIRONIC",
         'sentence_list': [{'text': sentimentText}]
-    }
+    };
 
     let formatedResults = Client.formatResult(res);
     console.log(formatedResults);
 
-    let tb = document.getElementById('tbody');
     let tr = document.createElement('tr');
     for (let i in formatedResults) {
         let td = document.createElement('td');
         td.innerHTML = formatedResults[i];
-        tr.appendChild(td)
+        tr.appendChild(td);
     }
+
     tb.appendChild(tr);
 
     console.log("::: Elements Created :::");
 
     document.getElementById('sentiment-results').innerHTML = JSON.stringify(res);
 
+
 }
 
 export { addResult }
+
