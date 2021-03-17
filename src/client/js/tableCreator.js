@@ -9,7 +9,19 @@ function createTable(formatedResults) {
 
     let table = document.createElement('table');
     let thead = document.createElement('thead');
+    let tr = document.createElement('tr');
+    let th = document.createElement('th');
+    th.innerHTML = 'Sentiment Analysis';
+    th.setAttribute('colspan', '4');
+    tr.appendChild(th);
+    thead.appendChild(tr);
+    table.appendChild(thead);
+
+
+    let tb = document.createElement('tbody');
+
     let tr1 = document.createElement('tr');
+    tr1.setAttribute('class', 'titles');
     let titles = [
         'Text',
         'Score tage',
@@ -17,14 +29,13 @@ function createTable(formatedResults) {
         'Confidence'
     ];
     for (let title of titles) {
-        let th = document.createElement('th');
-        th.innerHTML = title;
-        tr1.appendChild(th)
+        let td = document.createElement('td');
+        td.innerHTML = title;
+        tr1.appendChild(td)
     }
-    thead.appendChild(tr1);
-    table.appendChild(thead);
+    tb.appendChild(tr1);
 
-    let tb = document.createElement('tbody');
+
     let tr2 = document.createElement('tr');
     for (let i in formatedResults) {
         let td = document.createElement('td');
