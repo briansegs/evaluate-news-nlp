@@ -1,4 +1,4 @@
-function formatResult(res) {
+function formatAnalysis(res) {
     let formated = {
         'Text': res['sentence_list'][0].text,
         'Score tag': res['score_tag'],
@@ -8,4 +8,4 @@ function formatResult(res) {
     return formated
 }
 
-export { formatResult }
+export { formatAnalysis }
