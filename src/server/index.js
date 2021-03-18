@@ -1,17 +1,14 @@
 var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
-var bodyParser = require('body-parser')
 var cors = require('cors')
 const dotenv = require('dotenv');
-
 dotenv.config();
 
-const app = express()
 
-// Cors for cross origin allowance
-app.use(cors())
-const { Router, response } = require('express');
+// Start up an instance of app
+const app = express();
+
 
 // to use json
 app.use(express.json())
@@ -20,6 +17,10 @@ app.use(express.json())
 app.use(express.urlencoded({
   extended: true
 }))
+
+// Cors for cross origin allowance
+app.use(cors())
+const { Router, response } = require('express');
 
 // Initialize the main project folder
 app.use(express.static('dist'))
@@ -37,6 +38,13 @@ app.listen(port, function () {
 })
 
 
+// Routes
+
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
+})
+
+app.post('/analyze', function (req, res) {
+    let data = req.body;
+
 })
