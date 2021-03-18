@@ -8,14 +8,20 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express()
+
+// Cors for cross origin allowance
 app.use(cors())
+const { Router, response } = require('express');
+
 // to use json
-app.use(bodyParser.json())
+app.use(express.json())
+
 // to use url encoded values
-app.use(bodyParser.urlencoded({
+app.use(express.urlencoded({
   extended: true
 }))
 
+// Initialize the main project folder
 app.use(express.static('dist'))
 
 app.get('/', function (req, res) {
@@ -29,6 +35,7 @@ const port = 8081;
 app.listen(port, function () {
     console.log(`Example app listening on port ${port}!`)
 })
+
 
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
