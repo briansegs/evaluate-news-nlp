@@ -7,7 +7,7 @@ import { createTable } from './js/tableCreator'
 
 import './styles/resets.scss'
 import './styles/base.scss'
-import './styles/footer.scss'
+import './styles/_page.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 import './styles/table.scss'
