@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC');
+@use 'page';
 
-body {
-	font-family: 'Noto Sans TC', sans-serif;
-}
+
+$light-gray: #e9e9e9;
+$table-header: #9887d8;
 
 
 table {
@@ -12,32 +11,35 @@ table {
   border-collapse: separate;
   border-spacing: 1.5px;
 
+
+	thead {
+    th {
+      background: $table-header;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: $light-gray;
+    }
+  }
+
+
+	th, td {
+		font-family: page.$secondary-font;
+		font-size: 15px;
+		padding: 10px;
+		text-align: left;
+		background: $light-gray;
+	}
 }
 
-thead {
-    th {
-        background:  #9887d8;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        color:#e9e9e9;
-    }
-}
 
 .titles {
     td {
-        font-weight: 600;
+      font-weight: 600;
     }
 }
 
 
-th, td {
-	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
-	font-weight: 400;
-	padding: 10px;
-	text-align: left;
-    background: #e9e9e9;
-}
+
 
 
 
