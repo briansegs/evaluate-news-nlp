@@ -18,7 +18,7 @@ function getSentiment(event) {
 
         fetch(baseURL+apiKey+json+text+lang)
             .then(res => res.json())
-            .then(res => Client.addResult(res));
+            .then(res => Client.addToDom(res));
     }
 
 }

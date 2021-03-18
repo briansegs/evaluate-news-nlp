@@ -1,4 +1,4 @@
-function addResult(res) {
+function addToDom(res) {
     let formatedResults = Client.formatAnalysis(res);
 
     console.log('Formated Results:', formatedResults);
@@ -6,5 +6,5 @@ function addResult(res) {
     Client.createTable(formatedResults);
 }
 
-export { addResult }
+export { addToDom }
 

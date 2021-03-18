@@ -1,7 +1,7 @@
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
 import { getSentiment } from './js/sentimentHandler'
-import { addResult } from './js/resultsHandler'
+import { addToDom } from './js/resultsHandler'
 import { formatAnalysis } from './js/formatHandler'
 import { createTable } from './js/tableCreator'
 
@@ -20,7 +20,7 @@ export {
     checkForName,
     handleSubmit,
     getSentiment,
-    addResult,
+    addToDom,
     formatAnalysis,
     createTable
    }
