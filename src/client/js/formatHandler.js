@@ -1,34 +1,34 @@
-function formatAnalysis(res) {
-    let formated = {
-        'Text': res['sentence_list'][0].text,
-        'Score tag': res['score_tag'],
-        'Agreement': res['agreement'],
-        'Confidence': res['confidence']
+function formatAnalysis(data) {
+    let formatedData = {
+        'Text': data['sentence_list'][0].text,
+        'Score tag': data['score_tag'],
+        'Agreement': data['agreement'],
+        'Confidence': data['confidence']
     };
 
-    console.log(formated["Score tag"]);
-    switch (formated['Score tag']) {
+    console.log(formatedData["Score tag"]);
+    switch (formatedData['Score tag']) {
         case 'P':
-            formated['Score tag'] = 'Positive';
+            formatedData['Score tag'] = 'Positive';
             break;
         case 'P+':
-            formated['Score tag'] = 'Strong Positive';
+            formatedData['Score tag'] = 'Strong Positive';
             break;
         case 'NEU':
-            formated['Score tag'] = 'Neutral';
+            formatedData['Score tag'] = 'Neutral';
             break;
         case 'N':
-            formated['Score tag'] = 'Negative';
+            formatedData['Score tag'] = 'Negative';
             break;
         case 'N+':
-            formated['Score tag'] = 'Strong Negative';
+            formatedData['Score tag'] = 'Strong Negative';
             break;
         case 'NONE':
-            formated['Score tag'] = 'Without Sentiment';
+            formatedData['Score tag'] = 'Without Sentiment';
             break;
     }
 
-    return formated
+    return formatedData
 }
 
 export { formatAnalysis }
