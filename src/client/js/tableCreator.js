@@ -56,8 +56,6 @@ const addToDom = async () => {
     } catch (error) {
         console.log('error', error);
     }
-
-
 }
 
 export { addToDom }
