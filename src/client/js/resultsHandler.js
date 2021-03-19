@@ -1,9 +1,9 @@
 function addToDom(data) {
-    let formatedResults = Client.formatAnalysis(data);
+    let formatedData = Client.formatAnalysis(data);
 
-    console.log('Formated Results:', formatedResults);
+    console.log('Formated Data:', formatedData);
 
-    Client.createTable(formatedResults);
+    Client.createTable(formatedData);
 }
 
 export { addToDom }
