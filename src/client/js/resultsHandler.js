@@ -1,5 +1,5 @@
-function addToDom(res) {
-    let formatedResults = Client.formatAnalysis(res);
+function addToDom(data) {
+    let formatedResults = Client.formatAnalysis(data);
 
     console.log('Formated Results:', formatedResults);
 
