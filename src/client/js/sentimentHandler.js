@@ -11,16 +11,17 @@ function getSentiment(event) {
     if (sentimentText === '') {
         alert ('Please input text.')
     } else {
-        console.log("::: Sentiment Submitted :::")
+        console.log("::: Sentiment Submitted :::");
 
         let text = sentimentText.replace(/\s/g, '%20');
-        console.log(baseURL+apiKey+json+text+lang)
 
-        fetch(baseURL+apiKey+json+text+lang)
-            .then(res => res.json())
-            .then(res => Client.addToDom(res));
+        Client.getAnalysis(baseURL, apiKey, json, text, lang)
+        .then(function (data) {
+            Client.addToDom(data);
+        })
     }
-
 }
 
+
 export { getSentiment }
+
