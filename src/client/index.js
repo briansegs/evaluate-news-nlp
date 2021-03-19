@@ -4,6 +4,7 @@ import { getSentiment } from './js/sentimentHandler'
 import { addToDom } from './js/resultsHandler'
 import { formatAnalysis } from './js/formatHandler'
 import { createTable } from './js/tableCreator'
+import { getAnalysis } from './js/analysisHandler'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -22,6 +23,7 @@ export {
     getSentiment,
     addToDom,
     formatAnalysis,
-    createTable
+    createTable,
+    getAnalysis
    }
 
