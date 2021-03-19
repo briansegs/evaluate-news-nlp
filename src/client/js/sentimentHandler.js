@@ -17,8 +17,11 @@ function analyzeSentiment(event) {
 
         Client.getAnalysis(baseURL, apiKey, json, text, lang)
         .then(function (data) {
-            Client.addToDom(data);
+            let formatedData = Client.formatAnalysis(data);
+            Client.postData('/add', formatedData);
+            Client.addToDom();
         })
+
     }
 }
 
