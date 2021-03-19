@@ -44,7 +44,17 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-app.post('/analyze', function (req, res) {
-    let data = req.body;
+// GET All
 
+const analysisData = [];
+
+app.get('/all', (req, res) => {
+    let latestData = analysisData[analysisData.length - 1];
+    res.send(latestData);
+})
+
+// POST Data
+app.post('/add', (req, res) => {
+    let newData = req.body;
+    analysisData.push(newData);
 })
