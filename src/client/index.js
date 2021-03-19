@@ -1,6 +1,6 @@
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
-import { getSentiment } from './js/sentimentHandler'
+import { analyzeSentiment } from './js/sentimentHandler'
 import { addToDom } from './js/resultsHandler'
 import { formatAnalysis } from './js/formatHandler'
 import { createTable } from './js/tableCreator'
@@ -20,7 +20,7 @@ alert("I EXIST")
 export {
     checkForName,
     handleSubmit,
-    getSentiment,
+    analyzeSentiment,
     addToDom,
     formatAnalysis,
     createTable,

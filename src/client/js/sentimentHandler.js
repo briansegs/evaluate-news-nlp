@@ -3,7 +3,7 @@ let apiKey = `?key=${process.env.API_KEY}`;
 let json = '&of=json&txt='
 let lang = '&lang=en'
 
-function getSentiment(event) {
+function analyzeSentiment(event) {
     event.preventDefault()
 
     let sentimentText = document.getElementById('sentiment').value
@@ -23,5 +23,5 @@ function getSentiment(event) {
 }
 
 
-export { getSentiment }
+export { analyzeSentiment }
 
