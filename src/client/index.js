@@ -1,5 +1,3 @@
-import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
 import { analyzeSentiment } from './js/sentimentHandler'
 import { addToDom } from './js/tableCreator'
 import { formatAnalysis } from './js/formatHandler'
@@ -16,8 +14,6 @@ import './styles/table.scss'
 alert("I EXIST")
 
 export {
-    checkForName,
-    handleSubmit,
     analyzeSentiment,
     addToDom,
     formatAnalysis,
