@@ -6,7 +6,6 @@ function formatAnalysis(data) {
         'Confidence': data['confidence']
     };
 
-    console.log(formatedData["Score tag"]);
     switch (formatedData['Score tag']) {
         case 'P':
             formatedData['Score tag'] = 'Positive';
