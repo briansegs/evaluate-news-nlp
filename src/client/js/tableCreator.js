@@ -1,12 +1,8 @@
 const addToDom = async () => {
-    const request = await fetch('http://localhost:8081/all');
-    let allData = await request.json();
-    let latestData = allData[allData.length - 1];
-    console.log(latestData);
+    const request = await fetch('/all');
+    let latestData = await request.json();
 
     try {
-
-
         let section = document.getElementById('table');
 
         if (section.firstChild != null) {
@@ -65,4 +61,6 @@ const addToDom = async () => {
 }
 
 export { addToDom }
+
+
 
