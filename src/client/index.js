@@ -3,8 +3,9 @@ import { handleSubmit } from './js/formHandler'
 import { analyzeSentiment } from './js/sentimentHandler'
 import { addToDom } from './js/resultsHandler'
 import { formatAnalysis } from './js/formatHandler'
-import { createTable } from './js/tableCreator'
+
 import { getAnalysis } from './js/analysisHandler'
+import { postData } from './js/postData'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -23,7 +24,7 @@ export {
     analyzeSentiment,
     addToDom,
     formatAnalysis,
-    createTable,
-    getAnalysis
+    getAnalysis,
+    postData
    }
 
