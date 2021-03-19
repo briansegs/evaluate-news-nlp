@@ -8,7 +8,6 @@ const addToDom = async () => {
         if (section.firstChild != null) {
             section.firstChild.remove();
         }
-
         console.log("::: Creating Elements :::");
 
         let table = document.createElement('table');
@@ -20,7 +19,6 @@ const addToDom = async () => {
         tr.appendChild(th);
         thead.appendChild(tr);
         table.appendChild(thead);
-
 
         let tb = document.createElement('tbody');
 
@@ -38,7 +36,6 @@ const addToDom = async () => {
             tr1.appendChild(td)
         }
         tb.appendChild(tr1);
-
 
         let tr2 = document.createElement('tr');
         for (let i in latestData) {
