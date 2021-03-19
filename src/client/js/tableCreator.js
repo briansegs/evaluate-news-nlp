@@ -48,7 +48,6 @@ const addToDom = async () => {
         section.appendChild(table);
 
         console.log("::: Elements Created :::");
-        console.log('Created Elements:', section);
 
     } catch (error) {
         console.log('error', error);
