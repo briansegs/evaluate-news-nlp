@@ -9,12 +9,3 @@ test('ensure button Submit works', () => {
     btnSubmit.click();
     expect(btnSubmit.innerHTML).toBe('Submit');
 });
-test('', () => {
-
-    document.body.innerHTML =
-        '<input id="sentiment" type="text" name="text" value="" placeholder="Input text">'
-        '<button onclick="return Client.analyzeSentiment(event)">Submit</button>';
-    const btnSubmit = document.querySelector('button');
-    btnSubmit.click();
-
-});
