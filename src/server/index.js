@@ -25,9 +25,9 @@ const { Router, response } = require('express');
 // Initialize the main project folder
 app.use(express.static('dist'))
 
+// Sets landing page
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
-
 })
 
 // designates what port the app will listen to for incoming requests
@@ -40,12 +40,10 @@ app.listen(port, function () {
 
 // Routes
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
-})
 
 // GET All
 
+// TODO: Turn into backend
 const analysisData = [];
 
 app.get('/all', (req, res) => {
