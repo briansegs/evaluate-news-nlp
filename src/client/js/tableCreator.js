@@ -1,3 +1,9 @@
+/**
+ * Fetches data from the server
+ * Creates a table with data inserted
+ * Adds table to the DOM
+ */
+
 const addToDom = async () => {
     const request = await fetch('/all');
     let latestData = await request.json();
@@ -5,12 +11,15 @@ const addToDom = async () => {
     try {
         let section = document.getElementById('table');
 
+        // Removes current table before creating a new table
         if (section.firstChild != null) {
             section.firstChild.remove();
         }
         console.log("::: Creating Elements :::");
 
         let table = document.createElement('table');
+
+        // Creates table head and heading
         let thead = document.createElement('thead');
         let tr = document.createElement('tr');
         let th = document.createElement('th');
@@ -22,6 +31,7 @@ const addToDom = async () => {
 
         let tb = document.createElement('tbody');
 
+        // Creates titles for each row
         let tr1 = document.createElement('tr');
         tr1.setAttribute('class', 'titles');
         let titles = [
@@ -37,6 +47,7 @@ const addToDom = async () => {
         }
         tb.appendChild(tr1);
 
+        // Adds data to the table
         let tr2 = document.createElement('tr');
         for (let i in latestData) {
             let td = document.createElement('td');

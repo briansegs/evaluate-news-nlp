@@ -1,3 +1,7 @@
+/**
+ * Fetches information from an API
+ * Returns recieved data
+ */
 const getAnalysis = async (baseURL, apiKey, json, text, lang) => {
     let res = await fetch(baseURL+apiKey+json+text+lang)
     try {

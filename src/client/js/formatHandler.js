@@ -1,3 +1,8 @@
+/**
+ * formats data recieved from API
+ * Changes Score tag to make it more readable by the end-user
+ */
+
 function formatAnalysis(data) {
     let formatedData = {
         'Text': data['sentence_list'][0].text,
@@ -6,6 +11,7 @@ function formatAnalysis(data) {
         'Confidence': data['confidence']
     };
 
+    // switches score tag based on what's recieved by API
     switch (formatedData['Score tag']) {
         case 'P':
             formatedData['Score tag'] = 'Positive';

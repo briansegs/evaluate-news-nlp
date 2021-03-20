@@ -1,8 +1,17 @@
+// Variables to build API call
 let baseURL = 'https://api.meaningcloud.com/sentiment-2.1';
 let apiKey = `?key=${process.env.API_KEY}`;
 let json = '&of=json&txt='
 let lang = '&lang=en'
 
+/**
+ * Stores text from form
+ * Alerts if text field is empty
+ * Calls the API
+ * Formats data recieved from API
+ * Posts data to the server
+ * Creates a table with data from the server and adds it to the DOM
+ */
 function analyzeSentiment(event) {
     event.preventDefault()
 

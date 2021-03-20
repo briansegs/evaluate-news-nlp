@@ -1,3 +1,7 @@
+/**
+ * Sends data to a server endpoint
+ */
+
 const postData = async (url = '', formatedData = {}) => {
     const response = await fetch(url, {
         method: 'POST',
