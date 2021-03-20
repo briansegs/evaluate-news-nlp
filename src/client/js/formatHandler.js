@@ -1,4 +1,5 @@
 function formatAnalysis(data) {
+    console.log('data', data);
     let formatedData = {
         'Text': data['sentence_list'][0].text,
         'Score tag': data['score_tag'],
@@ -27,6 +28,7 @@ function formatAnalysis(data) {
             break;
     }
 
+    console.log('formated Data', formatedData);
     return formatedData
 }
 
