@@ -11,7 +11,7 @@ import './styles/form.scss'
 import './styles/header.scss'
 import './styles/table.scss'
 
-alert("I EXIST")
+alert("Welcome! Write a sentence and find out how negitive or positive it is.")
 
 export {
     analyzeSentiment,
